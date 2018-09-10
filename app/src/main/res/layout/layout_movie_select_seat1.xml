@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+
+
+    <LinearLayout
+        android:id="@+id/seat1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/seat_yx"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="已选" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/seat_kx"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="可选" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/seat_sd"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="锁定" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/seat_ys"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="已售" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seat2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seat1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:id="@+id/yingmu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="银幕"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/seatviewcont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seat2"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <com.example.seat.ScreenView
+            android:id="@+id/screen_view"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginLeft="20dip" />
+
+        <com.example.seat.SeatNumberView
+            android:id="@+id/seat_number_view"
+            android:layout_width="20dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/screen_view" />
+
+        <com.example.seat.SeatView
+            android:id="@+id/seat_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/screen_view"
+            android:layout_toRightOf="@id/seat_number_view" />
+    </RelativeLayout>
+
+</RelativeLayout>
